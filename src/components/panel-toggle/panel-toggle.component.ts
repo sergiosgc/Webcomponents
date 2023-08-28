@@ -34,20 +34,7 @@ export default class SsgcPanelToggle extends SsgcElement {
   @query("div.panel-toggle") basePart: HTMLDivElement;
   @query("div.left-panel") leftPanel: HTMLDivElement;
   @query("div.right-panel") rightPanel: HTMLDivElement;
-  /*
-  private _basePart: HTMLElement | null = null;
-  basePart(anyChild: HTMLElement): HTMLElement {
-    if (this._basePart == null) {
-      this._basePart = document.evaluate(
-        "(.//ancestor::div[contains(@class, 'panel-toggle')])[position() = last()]",
-        anyChild,
-        null,
-        XPathResult.FIRST_ORDERED_NODE_TYPE
-      ).singleNodeValue as HTMLElement;
-    }
-    return this._basePart as HTMLElement;
-  }
-*/
+
   firstUpdated() {
     this.handleRightChange();
   }
