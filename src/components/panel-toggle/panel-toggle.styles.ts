@@ -43,10 +43,16 @@ export default css`
       "panel      panel   panel";
     grid-template-columns: 1fr min-content 1fr;
   }
+  .right-label,
+  .left-label {
+    font-size: var(--height);
+  }
   .left-label {
     grid-area: left-label;
     text-align: right;
-    font-size: var(--height);
+  }
+  .right-label {
+    grid-area: right-label;
   }
   .control {
     grid-area: control;
@@ -81,9 +87,6 @@ export default css`
   }
   .panel-toggle.right .switch-thumb {
     translate: calc((var(--width) - var(--height)) / 2);
-  }
-  .right-label {
-    grid-area: right-label;
   }
   .left-panel {
     grid-area: panel;
