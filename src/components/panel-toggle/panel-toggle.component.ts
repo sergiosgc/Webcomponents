@@ -32,13 +32,9 @@ export default class SsgcPanelToggle extends SsgcElement {
         ? window.getComputedStyle(this.rightPanel).display
         : window.getComputedStyle(this.leftPanel).display;
     if (this.right) {
-      this.basePart.classList.add("right");
-      this.basePart.classList.remove("left");
       this.leftPanel.style.display = "none";
       this.rightPanel.style.display = visibleDisplay;
     } else {
-      this.basePart.classList.remove("right");
-      this.basePart.classList.add("left");
       this.leftPanel.style.display = visibleDisplay;
       this.rightPanel.style.display = "none";
     }
@@ -54,6 +50,8 @@ export default class SsgcPanelToggle extends SsgcElement {
         part="base"
         class=${classMap({
           "panel-toggle": true,
+          "left": this.left,
+          "right": this.right
         })}
       >
         <span part="left-label" class="left-label"
